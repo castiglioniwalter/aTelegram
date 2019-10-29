@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<html>
+  <head> <title>AlterTelegram</title>
+    <link rel="stylesheet" href="{% static 'css/guihtmlstyle.css' %}"></link>
+  </head>
+  <body bgcolor="grey">
+    <div id="sopra">
+    </div>
+    <div id="sotto">
+    </div>
+      <div id="titolino">
+        <img src="{% static 'images/iconaTelegram.PNG' %}" align="left" height="40px" width="40px">
+        <h1 id="scrTelegram" style='color:white;'>Telegram</h1>
+        <form method="POST">
+          <input type="submit" class="buttAvanti" value="Avanti">
+      </div>
+      <div id="accesso">
+        <p id="numeroCon">Numero inserito</p>
+        <p id="numIns" style='color:grey;'>{{ form }}</p>
+        <p id="imm">Codice:</p>
+        {% csrf_token %}
+        <input type="hidden" name="number" value="{{ form }}">
+        <input type="text" name="codice" placeholder="Immetti il tuo codice" id="codic">
+        </form>
+      </div>
+  </body>
+</html>

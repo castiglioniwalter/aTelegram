@@ -1,0 +1,49 @@
+{% load staticfiles %}
+<html>
+  <head> <title>aTelegram</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  </head>
+  <body bgcolor="#9ACD32">
+    <script>
+    function updateRow()
+    {
+        $.ajax({
+           type: "GET",
+            url: "chat/update",
+            data: {"chatid": 0},
+            datatype:"json",
+            success: function (output) {
+              if (output.bottone!=0){
+                location.href = output.new_url;
+              }
+              if (output.scroll==1){
+                window.scrollBy(0, -150);
+              }
+              if (output.scroll==-1){
+                window.scrollBy(0, 150);
+              }
+            }
+        });
+    }
+    setInterval("updateRow()", 400);
+    </script>
+    <div align="right" style="background-color: #9acd32">
+    </div>
+    {% for id,contatto,photo in array %}
+      <div class="media" style="background-color: #9acd32">
+          <img src="{% static photo %}" id="contim" class="align-self-center mr-3" style="width:85px; border-radius: 100px;">
+          <div class="media-body">
+            <form method="POST" action="chat/{{id}}">
+              <!---da sapere----->
+              {% csrf_token %}
+              <br><input type="submit" style="height:85px; width:100%; font-size:45px; font-weight:bold;  border-radius: 7px;" class="btn btn-light" value="{{ contatto }}">
+            </form>
+          </div>
+      </div>
+    {% endfor %}
+  </body>
+</html>

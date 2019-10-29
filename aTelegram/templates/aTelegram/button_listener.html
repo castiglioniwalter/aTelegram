@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<html>
+  <head> <title>aTelegram</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/guihtmlstyle.css' %}"></link>
+  </head>
+  <body>
+    <script>
+    function updateRow()
+    {
+      $.ajax({
+           type: "GET",
+            url: "update_bottone",
+            data: {"chatid": {{ chatid }} },
+            datatype:"html",
+            success: function (output) {
+              location.href = "{% url 'Contatti' %}";
+            }
+        });
+    }
+    setInterval("updateRow()",1000);
+    </script>
+
+    Premere il bottone da assiociare
+  </body>
+</html>

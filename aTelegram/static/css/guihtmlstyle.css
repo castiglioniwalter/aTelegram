@@ -1,0 +1,161 @@
+div#sopra{
+  position: absolute;
+  width: 100%;
+  height: 29%;
+  top: 0%;
+  left: 0%;
+  background: #4181C0;
+}
+div#sotto{
+  position: absolute;
+  width: 100%;
+  height: 71%;
+  top: 29%;
+  left: 0%;
+  background: #E0E0FF;
+}
+div#titolino {
+  position: absolute;
+  width: 500px;
+  height: 70px;
+  top: 10%;
+  left: 30%;
+  background: #4181C0;
+  border-radius: 10px 10px 0px 0px;
+}
+h1#scrTelegram{
+  text-align: left;
+  margin-left: 15%;
+  margin-top: 10%
+  color: white;
+  font-family: Sans-serif;
+  font-size: 95%;
+}
+img#telim{
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 0%;
+  width: 40px; height: 40px;
+}
+.buttAvanti{
+  position: absolute;
+  right: 0%;
+  top: 18%;
+  background-color: #4181C0;
+  border: none;
+  color: white;
+  padding: 2% 2%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 90%;
+  font-weight: bold;
+  font-family: Sans-serif;
+}
+div#accesso{
+  position: absolute;
+  width: 40%;
+  height: 60%;
+  top: 22%;
+  left: 30%;
+  background: #FFFFFF;
+  border-radius: 10px 10px 10px 10px;
+}
+p#Accedi{
+  text-align: left;
+  margin-left: 14%;
+  margin-top: 14%;
+  color: black;
+  font-family: Sans-serif;
+  font-weight: bold;
+  font-size: 100%;
+}
+p#InserisciNumero{
+  text-align: left;
+  margin-top: 14%;
+  margin-left: 14%;
+  color: grey;
+  font-family: Sans-serif;
+  font-size: 83%;
+}
+input#id_num{
+  position: auto;
+  margin-left: 15%;
+  margin-top: 10%;
+  width: 62%;
+  font-size: 80%;
+  font-family: Sans-serif;
+  font-weight: bold;
+  color: grey;
+  border-width: 1;
+}
+
+<!-- InserisciCodice -->
+p#numeroCon{
+  margin-left: 30%;
+  margin-top: 14%;
+  color: black;
+  font-family: Sans-serif;
+  font-weight: bold;
+  font-size: 100%;
+}
+p#imm{
+  margin-left: 43%;
+  margin-top: 17%;
+  color: black;
+  font-family: Sans-serif;
+  font-weight: bold;
+  font-size: 90%;
+}
+input#codic{
+  position: absolute;
+  margin: none;
+  margin-left: 36%;
+  width: 32%;
+  font-size: 80%;
+  font-family: Sans-serif;
+  font-weight: bold;
+  color: grey;
+  border-width: 0;
+}
+p#numeroCon{
+  margin-left: 35%;
+  margin-top: 14%;
+  color: black;
+  font-family: Sans-serif;
+  font-weight: bold;
+  font-size: 100%;
+}
+p#numIns{
+  position: absolute;
+  margin: none;
+  margin-left: 37%;
+  width: 25%;
+  font-size: 100%;
+  font-family: Sans-serif;
+  font-weight: bold;
+  color: grey;
+  border-width: 0;
+}
+<!-- Contatti -->
+.inputcontatti{
+  position: absolute;
+  right: 0%;
+  top: 18%;
+  background-color: #4181C0;
+  border: none;
+  color: white;
+  padding: 2% 2%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 90%;
+  font-weight: bold;
+  font-family: Sans-serif;
+}
+.contatti{
+
+}
+img#contim{
+  width: 40px; height: 40px;
+}

@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<html>
+  <head> <title>aTelegram</title>
+    <link rel="stylesheet" href="{% static 'css/guihtmlstyle.css' %}"></link>
+  </head>
+  <body bgcolor="grey">
+    <div id="sopra">
+    </div>
+    <div id="sotto">
+    </div>
+      <div id="titolino">
+        <img src="{% static 'images/iconaTelegram.PNG' %}" align="left" id="telim">
+        <h1 style='color:white;' id="scrTelegram">Telegram</h1>
+        <form method='POST'>
+          <input type="submit" value="Avanti" class="buttAvanti">
+      </div>
+      <div id="accesso">
+        <p id="Accedi">Accedi</p>
+        <p id="InserisciNumero">Inserisci il tuo numero di telefono completo.</p>
+            {% csrf_token %}
+            <label for="id_phone_number"></label>
+            <input type="text" name="phone_number" maxlength="14" required="" id="id_num">
+        </form>
+      </div>
+    </body>
+</html>

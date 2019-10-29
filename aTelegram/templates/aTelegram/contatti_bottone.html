@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<html>
+  <head> <title>aTelegram</title>
+    <link rel="stylesheet" href="{% static 'css/guihtmlstyle.css' %}"></link>
+  </head>
+  <body>
+    <div id="miodiv"></div>
+    {% for numero,id,contatto,photo in array %}
+      <div class="contatti" id="contatti">
+        <form method="POST" action="button_listener/{{id}}">
+          <!---da sapere----->
+          {% csrf_token %}
+          <img src="{% static photo %}" id="contim">
+          <input id="inputcontatti" type="submit" class="inputcontatti" value="{{ contatto }}">
+        </form>
+      </div>
+    {% endfor %}
+  </body>
+</html>
